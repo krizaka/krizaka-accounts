@@ -11,6 +11,7 @@
 **One Krizaka account for the krizaka.com properties: sign in, comment, keep what you read.**
 
 [![CI](https://github.com/krizaka/krizaka-accounts/actions/workflows/ci.yml/badge.svg)](https://github.com/krizaka/krizaka-accounts/actions/workflows/ci.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/krizaka/krizaka-accounts/badge)](https://scorecard.dev/viewer/?uri=github.com/krizaka/krizaka-accounts)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
 [Website](https://www.krizaka.com) · [Blog](https://blog.krizaka.com) · [Krizaka on GitHub](https://github.com/krizaka)
