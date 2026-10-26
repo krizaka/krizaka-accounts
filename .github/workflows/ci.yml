@@ -1,0 +1,27 @@
+# Verifies the repository (tests, javadoc, sources) with the organisation's Maven pipeline:
+# krizaka/.github/.github/workflows/maven.yml. Its job reports `maven / Verify (tests, javadoc, sources)`, the check main requires.
+# There is no code yet: a change that touches only Markdown, docs or the licence or workflows skips the build (reported « Skipped », which passes).
+# Drop this `ignore` the day the first module (pom.xml, mvnw) lands.
+name: CI
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  maven:
+    uses: krizaka/.github/.github/workflows/maven.yml@6266d6c7aa585db47387edc8d3fcebb73d86aa1d # main
+    with:
+      upstreams: "krizaka-build"
+      ignore: '^[^/]+\.md$|^docs/|^\.changeset/|^(LICENSE|NOTICE|SECURITY|CODE_OF_CONDUCT|SUPPORT)(\.md)?$|^\.gitignore$|^\.github/workflows/|^\.github/(ISSUE_TEMPLATE/|pull_request_template\.md$|FUNDING\.yml$|dependabot\.yml$)'
+    secrets: inherit
