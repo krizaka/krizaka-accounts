@@ -24,4 +24,4 @@ jobs:
     with:
       upstreams: "krizaka-build"
       ignore: '^[^/]+\.md$|^docs/|^\.changeset/|^(LICENSE|NOTICE|SECURITY|CODE_OF_CONDUCT|SUPPORT)(\.md)?$|^\.gitignore$|^\.github/workflows/|^\.github/(ISSUE_TEMPLATE/|pull_request_template\.md$|FUNDING\.yml$|dependabot\.yml$)'
-    secrets: inherit
+    secrets: inherit # zizmor: ignore[secrets-inherit] the org's own pinned pipeline; it reads SONAR_TOKEN and nothing else of the repository's secrets
