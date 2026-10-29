@@ -20,7 +20,7 @@ concurrency:
 
 jobs:
   maven:
-    uses: krizaka/.github/.github/workflows/maven.yml@6266d6c7aa585db47387edc8d3fcebb73d86aa1d # main
+    uses: krizaka/.github/.github/workflows/maven.yml@1d506b702a30ad519ca2561b51bcb981fe680e8e # main
     with:
       upstreams: "krizaka-build"
       ignore: '^[^/]+\.md$|^docs/|^\.changeset/|^(LICENSE|NOTICE|SECURITY|CODE_OF_CONDUCT|SUPPORT)(\.md)?$|^\.gitignore$|^\.github/workflows/|^\.github/(ISSUE_TEMPLATE/|pull_request_template\.md$|FUNDING\.yml$|dependabot\.yml$)'
